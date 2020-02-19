@@ -44,4 +44,20 @@
     - Translation
     - Photo
     - Included (default to yes, use tiny opt-out checkbox somewhere on the page)
-    
+
+
+### User Profile Validation
+Track user information to verify that people aren't taking advantage of the system
+
+See if it's possible (legal) to collect the following data from parents:
+    - Foster certification number (or whatever this is called)
+    - Photo ID
+    - Email / other contact info
+    - Certification last renewed date (figure out how to verify this automatically)
+    - Certification expiry date
+    - Foster children
+      - Names
+      - Ages (date of birth)
+      - Genders
+      - Clothing sizes
+      - Some kind of state or county ID for foster care

@@ -1,0 +1,10 @@
+version: '2'
+services:
+  postgresql-96-centos7:
+    image: centos/postgresql-96-centos7
+    environment:
+      - POSTGRESQL_USER=laravel
+      - 'POSTGRESQL_PASSWORD=Asdfasdf123!@#'
+      - POSTGRESQL_DATABASE=fosterhope
+    volumes:
+      - '/data/Databases/PostgreSQL/foster-hope:/var/lib/pgsql/data'
