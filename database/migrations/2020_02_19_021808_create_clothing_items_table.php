@@ -16,13 +16,14 @@ class CreateClothingItemsTable extends Migration
         Schema::create('clothing_items', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->char('barcode', 13);
+            $table->string('stock_id', 15);
             $table->string('type', 50);
             $table->string('size', 10);
             $table->char('gender', 1);
             $table->string('target_age');
             $table->string('condition', 255)->nullable();
+            $table->decimal('estimated_value', 8, 2)->nullable();
             $table->string('color', 15)->nullable();
-            $table->
             $table->boolean('available')->default(true);
             $table->timestamps();
 

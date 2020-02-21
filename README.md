@@ -61,3 +61,13 @@ See if it's possible (legal) to collect the following data from parents:
       - Genders
       - Clothing sizes
       - Some kind of state or county ID for foster care
+
+
+# Ideas
+- Ability to lay out multiple items, take a photo of them, and auto-crop photo into multiple items with barcode recognition.
+  - Have horizontal bar for hangers, have clothing front-facing with barcodes attached
+  - Could set up a lightbox for this with a stationary camera (fixed distance, focal length and focus point) for consistency
+  - When photo is taken, have software automatically divide clothing article image up based on fixed boundary boxes.
+  - Use high enough resolution camera to identify barcodes from these images
+  - This should all be managed through a webpage or desktop app of some kind
+  - Automatically recognize primary color of clothing article (most frequently occurring color), use color name dictionary to store this. Accurate white balance is required for this to work properly.

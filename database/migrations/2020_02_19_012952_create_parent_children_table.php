@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChildBagsTable extends Migration
+class CreateUserChildrenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateChildBagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('child_bags', function (Blueprint $table) {
+        Schema::create('user_children', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->bigInteger('parent_id');
+            $table->bigInteger('child_id');
+
+            $table->foreign('parent_id')->references('id')->on('parents');
+            $table->foreign('child_id')->references('id')->on('children');
         });
     }
 
@@ -26,6 +30,6 @@ class CreateChildBagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('child_bags');
+        Schema::dropIfExists('user_children');
     }
 }

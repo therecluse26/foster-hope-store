@@ -15,7 +15,11 @@ class CreateBagsTable extends Migration
     {
         Schema::create('bags', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('child_id');
+            $table->string('bag_color', 20);
             $table->timestamps();
+
+            $table->foreign('child_id')->references('id')->on('children');
         });
     }
 
